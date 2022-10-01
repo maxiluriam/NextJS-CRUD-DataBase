@@ -1,0 +1,29 @@
+import connectMongo from "../../../util/connectMongo";
+import Test from "../../../models/testModels";
+
+export default async function removeTest(req, res) {
+  try {
+    const { _id } = req.body;
+    console.log(_id);
+    console.log("wwwwwwwwwwwwwwwwww");
+    await connectMongo();
+
+    console.log("f nikola");
+    console.log(req.body.email,"ee");
+   
+
+    const test = await Test.findOne({ "email": req.body.email  });
+
+    console.log("f Werner");
+
+
+    if (test.password === req.body.password) {
+      res.json({Boolean:"true",id:test.id});
+    }
+
+
+  } catch (er) {
+    console.log(er);
+    res.json({ er });
+  }
+}
