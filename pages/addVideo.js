@@ -95,7 +95,7 @@ const AddVideo = (prop) => {
         >
           <button type="submit">Submit</button>
 
-          <input type="text" value={newVideo} onChange={handleChange} />
+          <input placeholder="https://youtu.be/0vI0HmznioI" type="text" value={newVideo} className="addVideoInput" onChange={handleChange} />
         </form>
         <div>
           <div className="iframButtonDiv">

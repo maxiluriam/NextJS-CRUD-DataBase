@@ -179,7 +179,15 @@ export default function Home(props) {
           white-space: nowrap;
 
           margin: 5px;
+
+ 
         }
+
+        .addVideoInput{
+
+          min-width: 300px;
+        }
+
       `}</style>
     </div>
   );
